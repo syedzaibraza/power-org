@@ -7,7 +7,7 @@ export default function YouthAmbassadorPage() {
   return (
     <div>
       <PageBanner
-        title="Youth Ambassador"
+        title="Youth Leadership Ambassador"
         subtitle="Ali Asghar — Leading POWER's Mission in Pakistan"
         breadcrumbs={[{ label: "Home", path: "/" }, { label: "About", path: "/about" }, { label: "Youth Ambassador" }]}
       />
@@ -16,7 +16,7 @@ export default function YouthAmbassadorPage() {
         <div className="max-w-[1440px] mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <ImageWithFallback
-              src="https://images.unsplash.com/photo-1660415439329-31086bc63e83?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+              src="/youth-leader.jpg"
               alt="Ali Asghar"
               className="w-full h-[500px] object-cover rounded-[16px]"
               style={{ boxShadow: "0 8px 30px rgba(0,0,0,0.12)" }}
@@ -24,11 +24,24 @@ export default function YouthAmbassadorPage() {
             <div>
               <SectionHeader tag="Youth Leadership" title="Meet Ali Asghar" centered={false} />
               <p style={{ fontSize: "16px", color: "#1A1A1A", lineHeight: 1.75, marginBottom: "16px" }}>
-                Ali Asghar serves as POWER Organization&apos;s Youth Ambassador in Pakistan, representing the next generation of humanitarian leaders. His energy, passion, and deep connection to local communities make him an invaluable bridge between POWER&apos;s New York headquarters and our operations on the ground.
+                “It is an incredible honor to serve as the Youth Leadership Ambassador for POWER Pakistan. I accept this responsibility with humility, determination, and a strong belief in the potential of Pakistan’s youth.
               </p>
-              <p style={{ fontSize: "16px", color: "#555555", lineHeight: 1.75, marginBottom: "16px" }}>
+              <p style={{ fontSize: "16px", color: "#1A1A1A", lineHeight: 1.75, marginBottom: "16px" }}>
+                As young people, we are not just the future — we are the present force of change. My mission is to inspire, engage, and empower youth across our nation to rise together for social justice, education, mental health awareness, and poverty relief.
+              </p>
+              <p style={{ fontSize: "16px", color: "#1A1A1A", lineHeight: 1.75, marginBottom: "16px" }}>
+                Under the banner of POWER (Pak American Organization for Workers’ Education & Relief), we are building a movement that values compassion, unity, and action. I am committed to creating opportunities for youth to lead with purpose — through volunteerism, training, and service-driven leadership.
+              </p>
+              <p style={{ fontSize: "16px", color: "#1A1A1A", lineHeight: 1.75, marginBottom: "16px" }}>
+
+                Let’s break barriers, challenge inequalities, and serve our communities — together. Because real power lies in people helping people.
+              </p>
+              <p style={{ fontSize: "16px", color: "#1A1A1A", lineHeight: 1.75, marginBottom: "16px", fontWeight: "bold" }}>
+                Join me on this journey — because the youth of today will shape the Pakistan of tomorrow.”
+              </p>
+              {/* <p style={{ fontSize: "16px", color: "#555555", lineHeight: 1.75, marginBottom: "16px" }}>
                 As Youth Ambassador, Ali coordinates food distributions, educational programs, and community outreach across multiple cities in Pakistan. He leads a team of young volunteers who share his vision of a better future.
-              </p>
+              </p> */}
               <div className="grid grid-cols-3 gap-4 mt-8">
                 {[
                   { icon: Users, num: "50+", label: "Youth Volunteers" },

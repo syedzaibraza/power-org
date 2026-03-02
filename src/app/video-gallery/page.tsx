@@ -85,7 +85,7 @@ export default function VideoGalleryPage() {
                   key={v.url}
                   type="button"
                   onClick={() => setVideoLightbox(i)}
-                  className="text-left group rounded-[12px] overflow-hidden bg-white"
+                  className="text-left group rounded-[12px] overflow-hidden bg-white flex flex-col"
                   style={{ boxShadow: "0 4px 18px rgba(0,0,0,0.08)" }}
                 >
                   <div className="relative" style={{ aspectRatio: "16/9" }}>

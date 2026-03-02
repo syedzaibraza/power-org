@@ -21,12 +21,11 @@ const timeline = [
 ];
 
 const team = [
-  { name: "Tahira Din", role: "Chairperson & Founder", initials: "TD" },
-  { name: "Ali Asghar", role: "Youth Ambassador (Pakistan)", initials: "AA" },
-  { name: "Board Member", role: "Director of Programs", initials: "BM" },
-  { name: "Board Member", role: "Director of Finance", initials: "BM" },
-  { name: "Board Member", role: "Director of Outreach", initials: "BM" },
-  { name: "Board Member", role: "Legal Advisor", initials: "BM" },
+  { name: "Tahira M Taj  ( Tahira Dan)", role: "Chairperson & Founder", image: "/board-of-directors.jpg" },
+  { name: "Nawab ub din", role: "Assistant Director", image: "/assistant-director.jpg" },
+  { name: "Ali Asghar", role: "Youth Ambassador (Pakistan)", image: "/youth-leader.jpg" },
+  { name: "Hiba Omer", role: "Director finance", image: "/director-finance.jpg" },
+
 ];
 
 export default function AboutPage() {
@@ -109,11 +108,15 @@ export default function AboutPage() {
       <section className="bg-[#F4F6F9] py-20">
         <div className="max-w-[1440px] mx-auto px-6">
           <SectionHeader tag="Our People" title="Leadership Team" />
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {team.map((m, i) => (
               <div key={i} className="bg-white rounded-[12px] p-6 text-center transition-all hover:-translate-y-1" style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.08)" }}>
-                <div className="w-20 h-20 rounded-full bg-[#1B3A6B] mx-auto flex items-center justify-center mb-4">
-                  <span style={{ fontSize: "24px", fontWeight: 700, color: "#D4AF37" }}>{m.initials}</span>
+                <div className="w-20 h-20 rounded-full mx-auto mb-4 overflow-hidden border border-[#1B3A6B]/10">
+                  <ImageWithFallback
+                    src={m.image}
+                    alt={m.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h4 style={{ fontSize: "15px", fontWeight: 600, color: "#1B3A6B", marginBottom: "4px" }}>{m.name}</h4>
                 <p style={{ fontSize: "12px", color: "#555555" }}>{m.role}</p>

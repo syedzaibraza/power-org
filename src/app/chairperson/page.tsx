@@ -17,9 +17,9 @@ export default function ChairpersonPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <div className="lg:sticky lg:top-[100px]">
               <ImageWithFallback
-                src="https://images.unsplash.com/photo-1646369505567-3a9cbb052342?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080"
+                src="/board-of-directors.jpg"
                 alt="Tahira Din"
-                className="w-full h-[500px] object-cover rounded-[16px]"
+                className="w-full h-[500px] object-contain rounded-[16px]"
                 style={{ boxShadow: "0 8px 30px rgba(0,0,0,0.12)" }}
               />
               <div className="mt-6 text-center">

@@ -130,28 +130,28 @@ const programs = [
 
 const campaigns = [
   {
-    title: "Ramadan Food Drive 2026",
-    desc: "Help us feed 1,000 families this Ramadan across Pakistan.",
-    goal: 50000,
-    raised: 37500,
+    title: "Children Education",
+    desc: "Sponsoring scholarships and school supplies for underprivileged children in Pakistan.",
+    goal: 100,
+    raised: 70,
     donors: 245,
-    image: IMAGES.hero1,
+    image: "/children-edu.png",
   },
   {
-    title: "Build a School in Sindh",
-    desc: "A new school will educate 200 children in rural Sindh, Pakistan.",
-    goal: 75000,
-    raised: 48000,
+    title: "Food Distribution",
+    desc: "Distributing food packages to 500+ families across Pakistan and New York communities.",
+    goal: 100,
+    raised: 85,
     donors: 182,
-    image: IMAGES.hero3,
+    image: "/food-distribution.png",
   },
   {
-    title: "NYC Winter Warmth Program",
-    desc: "Distributing winter essentials to homeless families in New York City.",
-    goal: 25000,
-    raised: 21000,
+    title: "Orphan Help",
+    desc: "Providing financial support and emotional care to orphaned children in Pakistan.",
+    goal: 100,
+    raised: 85,
     donors: 310,
-    image: IMAGES.nyc,
+    image: "/orphan-help.png",
   },
 ];
 
@@ -316,9 +316,8 @@ export default function HomePage() {
         {heroSlides.map((slide, i) => (
           <div
             key={i}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              i === currentSlide ? "opacity-100" : "opacity-0"
-            }`}
+            className={`absolute inset-0 transition-opacity duration-1000 ${i === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
           >
             <ImageWithFallback
               src={slide.image}
@@ -400,9 +399,8 @@ export default function HomePage() {
             <button
               key={i}
               onClick={() => setCurrentSlide(i)}
-              className={`w-3 h-3 rounded-full transition-all ${
-                i === currentSlide ? "bg-[#D4AF37] w-8" : "bg-white/50"
-              }`}
+              className={`w-3 h-3 rounded-full transition-all ${i === currentSlide ? "bg-[#D4AF37] w-8" : "bg-white/50"
+                }`}
             />
           ))}
         </div>
@@ -604,11 +602,11 @@ export default function HomePage() {
                       style={{ fontSize: "13px", fontWeight: 600 }}
                     >
                       <span className="text-[#27AE60]">
-                        ${c.raised.toLocaleString()} raised
+                        {c.raised.toLocaleString()} % raised
                       </span>
-                      <span className="text-[#555555]">
+                      {/* <span className="text-[#555555]">
                         ${c.goal.toLocaleString()} goal
-                      </span>
+                      </span> */}
                     </div>
                     <div className="h-2.5 bg-[#F4F6F9] rounded-full overflow-hidden">
                       <div
@@ -823,7 +821,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex justify-center">
               <ImageWithFallback
-                src={IMAGES.chairperson}
+                src="/board-of-directors.jpg"
                 alt="Tahira Din - Chairperson"
                 className="w-[400px] h-[500px] object-cover rounded-[16px]"
                 style={{ boxShadow: "0 8px 30px rgba(0,0,0,0.12)" }}
@@ -1032,19 +1030,19 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                image: IMAGES.project1,
-                title: "Free Medical Camp — Punjab",
-                desc: "Served 300+ patients in rural Punjab",
+                image: "/projects/hijab-day.jpg",
+                title: "Hijab Day",
+                desc: "Distribution of Hijabs to Women's on International Women Day at New-York",
               },
               {
-                image: IMAGES.project2,
-                title: "Women's Skills Workshop",
-                desc: "Trained 50 women in tailoring & crafts",
+                image: "/projects/rashan-distribution.jpg",
+                title: "Rashan Distribution",
+                desc: "Distribution of Ration 2024 Faisalabad",
               },
               {
-                image: IMAGES.project3,
-                title: "Clean Water Project — Sindh",
-                desc: "3 wells built serving 200+ families",
+                image: "/projects/orphan-education.png",
+                title: "Orphan Education",
+                desc: "Donation to Khubaib-Foundation for Orphans",
               },
             ].map((p) => (
               <div
