@@ -56,25 +56,133 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <div className="bg-white rounded-[12px] p-8" style={{ boxShadow: "0 4px 30px rgba(0,0,0,0.1)" }}>
-                <h3 style={{ fontSize: "24px", fontWeight: 700, color: "#1B3A6B", marginBottom: "20px" }}>Send Us a Message</h3>
+              <form
+                action="https://formspree.io/f/xjgeqylj"
+                method="POST"
+                className="bg-white rounded-[12px] p-8"
+                style={{ boxShadow: "0 4px 30px rgba(0,0,0,0.1)" }}
+              >
+                <h3
+                  style={{
+                    fontSize: "24px",
+                    fontWeight: 700,
+                    color: "#1B3A6B",
+                    marginBottom: "20px",
+                  }}
+                >
+                  Send Us a Message
+                </h3>
+                <input type="hidden" name="_subject" value="New contact message from powerny.org" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                   <div>
-                    <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>First Name *</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]" style={{ fontSize: "15px" }} />
+                    <label
+                      htmlFor="firstName"
+                      style={{
+                        fontSize: "14px",
+                        fontWeight: 600,
+                        color: "#1B3A6B",
+                        display: "block",
+                        marginBottom: "6px",
+                      }}
+                    >
+                      First Name *
+                    </label>
+                    <input
+                      id="firstName"
+                      name="firstName"
+                      type="text"
+                      required
+                      className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
+                      style={{ fontSize: "15px" }}
+                    />
                   </div>
                   <div>
-                    <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Last Name *</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]" style={{ fontSize: "15px" }} />
+                    <label
+                      htmlFor="lastName"
+                      style={{
+                        fontSize: "14px",
+                        fontWeight: 600,
+                        color: "#1B3A6B",
+                        display: "block",
+                        marginBottom: "6px",
+                      }}
+                    >
+                      Last Name *
+                    </label>
+                    <input
+                      id="lastName"
+                      name="lastName"
+                      type="text"
+                      required
+                      className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
+                      style={{ fontSize: "15px" }}
+                    />
                   </div>
                 </div>
                 <div className="mb-4">
-                  <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Email *</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]" style={{ fontSize: "15px" }} />
+                  <label
+                    htmlFor="email"
+                    style={{
+                      fontSize: "14px",
+                      fontWeight: 600,
+                      color: "#1B3A6B",
+                      display: "block",
+                      marginBottom: "6px",
+                    }}
+                  >
+                    Email *
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
+                    style={{ fontSize: "15px" }}
+                  />
                 </div>
                 <div className="mb-4">
-                  <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Subject *</label>
-                  <select className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]" style={{ fontSize: "15px" }}>
+                  <label
+                    htmlFor="phone"
+                    style={{
+                      fontSize: "14px",
+                      fontWeight: 600,
+                      color: "#1B3A6B",
+                      display: "block",
+                      marginBottom: "6px",
+                    }}
+                  >
+                    Phone
+                  </label>
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
+                    style={{ fontSize: "15px" }}
+                    placeholder="+92 308 402 0734"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    htmlFor="subject"
+                    style={{
+                      fontSize: "14px",
+                      fontWeight: 600,
+                      color: "#1B3A6B",
+                      display: "block",
+                      marginBottom: "6px",
+                    }}
+                  >
+                    Subject *
+                  </label>
+                  <select
+                    id="subject"
+                    name="subject"
+                    required
+                    className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
+                    style={{ fontSize: "15px" }}
+                  >
                     <option value="">Select a subject...</option>
                     <option>General Inquiry</option>
                     <option>Volunteering</option>
@@ -85,13 +193,42 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div className="mb-6">
-                  <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Message *</label>
-                  <textarea rows={5} className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37] resize-none" style={{ fontSize: "15px" }} placeholder="How can we help you?" />
+                  <label
+                    htmlFor="message"
+                    style={{
+                      fontSize: "14px",
+                      fontWeight: 600,
+                      color: "#1B3A6B",
+                      display: "block",
+                      marginBottom: "6px",
+                    }}
+                  >
+                    Message *
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={5}
+                    required
+                    className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37] resize-none"
+                    style={{ fontSize: "15px" }}
+                    placeholder="How can we help you?"
+                  />
                 </div>
-                <button className="w-full bg-[#C0392B] text-white rounded-[6px] py-4 hover:bg-[#A93226] transition-all flex items-center justify-center gap-2" style={{ fontSize: "15px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", boxShadow: "0 4px 15px rgba(192,57,43,0.4)" }}>
+                <button
+                  type="submit"
+                  className="w-full bg-[#C0392B] text-white rounded-[6px] py-4 hover:bg-[#A93226] transition-all flex items-center justify-center gap-2"
+                  style={{
+                    fontSize: "15px",
+                    fontWeight: 700,
+                    letterSpacing: "1px",
+                    textTransform: "uppercase",
+                    boxShadow: "0 4px 15px rgba(192,57,43,0.4)",
+                  }}
+                >
                   <Send size={16} /> Send Message
                 </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>

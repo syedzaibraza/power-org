@@ -27,25 +27,53 @@ export default function GetInvolvedPage() {
       <section className="bg-white py-20">
         <div className="max-w-[800px] mx-auto px-6">
           <SectionHeader tag="Volunteer" title="Join Our Team" subtitle="Whether you're in New York or Pakistan, your time and skills can make a real difference." />
-          <div className="bg-white rounded-[12px] p-8" style={{ boxShadow: "0 4px 30px rgba(0,0,0,0.1)" }}>
+          <form
+            action="https://formspree.io/f/xbdavgwz"
+            method="POST"
+            className="bg-white rounded-[12px] p-8"
+            style={{ boxShadow: "0 4px 30px rgba(0,0,0,0.1)" }}
+          >
+            <input type="hidden" name="_subject" value="New Get Involved submission from powerny.org" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
                 <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Full Name *</label>
-                <input type="text" className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]" style={{ fontSize: "15px" }} />
+                <input
+                  type="text"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
+                  style={{ fontSize: "15px" }}
+                />
               </div>
               <div>
                 <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Email *</label>
-                <input type="email" className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]" style={{ fontSize: "15px" }} />
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
+                  style={{ fontSize: "15px" }}
+                />
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
               <div>
                 <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Phone</label>
-                <input type="tel" className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]" style={{ fontSize: "15px" }} />
+                <input
+                  type="tel"
+                  name="phone"
+                  className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
+                  style={{ fontSize: "15px" }}
+                />
               </div>
               <div>
                 <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Location *</label>
-                <select className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]" style={{ fontSize: "15px" }}>
+                <select
+                  name="location"
+                  required
+                  className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
+                  style={{ fontSize: "15px" }}
+                >
                   <option value="">Select...</option>
                   <option>New York, USA</option>
                   <option>Pakistan — Punjab</option>
@@ -60,7 +88,7 @@ export default function GetInvolvedPage() {
               <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
                 {["Food Distribution", "Education", "Healthcare", "Women's Programs", "Events & Fundraising", "Social Media & Marketing"].map((a) => (
                   <label key={a} className="flex items-center gap-2 cursor-pointer bg-[#F4F6F9] rounded-[6px] px-3 py-2.5 hover:bg-[#D4AF37]/10 transition-colors">
-                    <input type="checkbox" className="accent-[#0D7377]" />
+                    <input type="checkbox" name="interests" value={a} className="accent-[#0D7377]" />
                     <span style={{ fontSize: "13px", color: "#1A1A1A" }}>{a}</span>
                   </label>
                 ))}
@@ -68,16 +96,25 @@ export default function GetInvolvedPage() {
             </div>
             <div className="mb-6">
               <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Why do you want to volunteer?</label>
-              <textarea rows={4} className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37] resize-none" style={{ fontSize: "15px" }} />
+              <textarea
+                name="message"
+                rows={4}
+                className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37] resize-none"
+                style={{ fontSize: "15px" }}
+              />
             </div>
-            <button className="w-full bg-[#0D7377] text-white rounded-[6px] py-4 hover:bg-[#0a5c5f] transition-colors flex items-center justify-center gap-2" style={{ fontSize: "15px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}>
+            <button
+              type="submit"
+              className="w-full bg-[#0D7377] text-white rounded-[6px] py-4 hover:bg-[#0a5c5f] transition-colors flex items-center justify-center gap-2"
+              style={{ fontSize: "15px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}
+            >
               <Send size={16} /> Submit Application
             </button>
-          </div>
+          </form>
         </div>
       </section>
 
-      <section className="bg-[#F4F6F9] py-20">
+      {/* <section className="bg-[#F4F6F9] py-20">
         <div className="max-w-[1440px] mx-auto px-6">
           <SectionHeader tag="Corporate Partners" title="Partnership Opportunities" subtitle="Partner with POWER to amplify your social impact." />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -102,7 +139,7 @@ export default function GetInvolvedPage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="bg-white py-20">
         <div className="max-w-[1000px] mx-auto px-6">

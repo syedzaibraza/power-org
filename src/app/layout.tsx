@@ -8,9 +8,12 @@ import { CookieConsent } from "@/components/CookieConsent";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
 export const metadata: Metadata = {
-  title: "Power Organization",
+  title: "Power - Non Profit Organization",
   description:
     "People Organizing for Welfare, Equality & Reform. Transforming Pain Into Purpose — From New York to Pakistan.",
+  icons: {
+    icon: "/power-logo.jpg",
+  },
 };
 
 export default function RootLayout({
