@@ -77,6 +77,7 @@ export function Footer() {
                 "Get Involved",
                 "Events & News",
                 "Gallery",
+                "Video Gallery",
                 "Contact",
               ].map((l) => (
                 <Link

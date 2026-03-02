@@ -1,6 +1,7 @@
 import { PageBanner } from "@/components/PageBanner";
 import { SectionHeader } from "@/components/SectionHeader";
 import { Send, Heart, Building, Globe, Package, Users } from "lucide-react";
+import { GetInvolvedFormspree } from "@/components/forms/GetInvolvedFormspree";
 
 const partnerTiers = [
   { title: "Bronze Partner", amount: "$1,000 — $4,999", benefits: ["Logo on website", "Social media mention", "Annual impact report"], color: "#CD7F32" },
@@ -27,90 +28,7 @@ export default function GetInvolvedPage() {
       <section className="bg-white py-20">
         <div className="max-w-[800px] mx-auto px-6">
           <SectionHeader tag="Volunteer" title="Join Our Team" subtitle="Whether you're in New York or Pakistan, your time and skills can make a real difference." />
-          <form
-            action="https://formspree.io/f/xbdavgwz"
-            method="POST"
-            className="bg-white rounded-[12px] p-8"
-            style={{ boxShadow: "0 4px 30px rgba(0,0,0,0.1)" }}
-          >
-            <input type="hidden" name="_subject" value="New Get Involved submission from powerny.org" />
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <div>
-                <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Full Name *</label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
-                  style={{ fontSize: "15px" }}
-                />
-              </div>
-              <div>
-                <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Email *</label>
-                <input
-                  type="email"
-                  name="email"
-                  required
-                  className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
-                  style={{ fontSize: "15px" }}
-                />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <div>
-                <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Phone</label>
-                <input
-                  type="tel"
-                  name="phone"
-                  className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
-                  style={{ fontSize: "15px" }}
-                />
-              </div>
-              <div>
-                <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Location *</label>
-                <select
-                  name="location"
-                  required
-                  className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]"
-                  style={{ fontSize: "15px" }}
-                >
-                  <option value="">Select...</option>
-                  <option>New York, USA</option>
-                  <option>Pakistan — Punjab</option>
-                  <option>Pakistan — Sindh</option>
-                  <option>Pakistan — KPK</option>
-                  <option>Other</option>
-                </select>
-              </div>
-            </div>
-            <div className="mb-4">
-              <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Area of Interest *</label>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-2">
-                {["Food Distribution", "Education", "Healthcare", "Women's Programs", "Events & Fundraising", "Social Media & Marketing"].map((a) => (
-                  <label key={a} className="flex items-center gap-2 cursor-pointer bg-[#F4F6F9] rounded-[6px] px-3 py-2.5 hover:bg-[#D4AF37]/10 transition-colors">
-                    <input type="checkbox" name="interests" value={a} className="accent-[#0D7377]" />
-                    <span style={{ fontSize: "13px", color: "#1A1A1A" }}>{a}</span>
-                  </label>
-                ))}
-              </div>
-            </div>
-            <div className="mb-6">
-              <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Why do you want to volunteer?</label>
-              <textarea
-                name="message"
-                rows={4}
-                className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37] resize-none"
-                style={{ fontSize: "15px" }}
-              />
-            </div>
-            <button
-              type="submit"
-              className="w-full bg-[#0D7377] text-white rounded-[6px] py-4 hover:bg-[#0a5c5f] transition-colors flex items-center justify-center gap-2"
-              style={{ fontSize: "15px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}
-            >
-              <Send size={16} /> Submit Application
-            </button>
-          </form>
+          <GetInvolvedFormspree />
         </div>
       </section>
 

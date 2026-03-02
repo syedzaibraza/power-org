@@ -47,7 +47,12 @@ const navLinks = [
   },
   { label: "Get Involved", path: "/get-involved" },
   { label: "Events & News", path: "/events" },
-  { label: "Gallery", path: "/gallery" },
+  {
+    label: "Gallery", path: "/gallery", children: [
+      { label: "Photo Gallery", path: "/gallery" },
+      { label: "Video Gallery", path: "/video-gallery" },
+    ]
+  },
   { label: "Contact", path: "/contact" },
 ];
 
