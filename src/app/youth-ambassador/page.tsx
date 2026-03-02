@@ -1,7 +1,8 @@
 import { PageBanner } from "@/components/PageBanner";
 import { SectionHeader } from "@/components/SectionHeader";
 import { ImageWithFallback } from "@/components/ImageWithFallback";
-import { Users, Globe, Heart, Send } from "lucide-react";
+import { YouthAmbassadorFormspree } from "@/components/forms/YouthAmbassadorFormspree";
+import { Users, Globe, Heart } from "lucide-react";
 
 export default function YouthAmbassadorPage() {
   return (
@@ -81,35 +82,7 @@ export default function YouthAmbassadorPage() {
       <section className="bg-white py-20">
         <div className="max-w-[700px] mx-auto px-6">
           <SectionHeader tag="Join The Movement" title="Become a Youth Volunteer" subtitle="Are you a young person in Pakistan who wants to make a difference? Join our team." />
-          <div className="bg-white rounded-[12px] p-8" style={{ boxShadow: "0 4px 20px rgba(0,0,0,0.08)" }}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <div>
-                <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Full Name</label>
-                <input type="text" className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]" style={{ fontSize: "15px" }} />
-              </div>
-              <div>
-                <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Email</label>
-                <input type="email" className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]" style={{ fontSize: "15px" }} />
-              </div>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-              <div>
-                <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>City</label>
-                <input type="text" className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]" style={{ fontSize: "15px" }} />
-              </div>
-              <div>
-                <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Age</label>
-                <input type="number" className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37]" style={{ fontSize: "15px" }} />
-              </div>
-            </div>
-            <div className="mb-4">
-              <label style={{ fontSize: "14px", fontWeight: 600, color: "#1B3A6B", display: "block", marginBottom: "6px" }}>Why do you want to volunteer?</label>
-              <textarea rows={4} className="w-full px-4 py-3 rounded-[6px] bg-[#F4F6F9] border border-gray-200 focus:outline-none focus:border-[#D4AF37] resize-none" style={{ fontSize: "15px" }} />
-            </div>
-            <button className="w-full bg-[#0D7377] text-white rounded-[6px] py-4 hover:bg-[#0a5c5f] transition-colors flex items-center justify-center gap-2" style={{ fontSize: "15px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}>
-              <Send size={16} /> Submit Application
-            </button>
-          </div>
+          <YouthAmbassadorFormspree />
         </div>
       </section>
     </div>

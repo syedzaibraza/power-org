@@ -52,7 +52,7 @@ const IMAGES = {
 
 const heroSlides = [
   {
-    image: IMAGES.hero1,
+    image: "/videos/thumbnail.jpg",
     videoUrl:
       "/videos/POWER-SHOW.mp4",
     title: "Transforming Pain Into Purpose",
@@ -299,6 +299,7 @@ function Instagram({
 
 export default function HomePage() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [heroVideoLoaded, setHeroVideoLoaded] = useState(false);
 
   useEffect(() => {
     const timer = setInterval(
@@ -322,8 +323,22 @@ export default function HomePage() {
               }`}
           >
             {"videoUrl" in slide && slide.videoUrl ? (
-
-              <video src={slide.videoUrl} autoPlay muted loop className="absolute inset-0 w-full h-full object-fill" />
+              <>
+                <ImageWithFallback
+                  src={slide.image}
+                  alt={slide.title}
+                  className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${heroVideoLoaded ? "opacity-0" : "opacity-100"}`}
+                />
+                <video
+                  src={slide.videoUrl}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  onLoadedData={() => setHeroVideoLoaded(true)}
+                  className={`absolute inset-0 w-full h-full object-fill transition-opacity duration-700 ${heroVideoLoaded ? "opacity-100" : "opacity-0"}`}
+                />
+              </>
             ) : (
               <ImageWithFallback
                 src={slide.image}
@@ -1200,7 +1215,7 @@ export default function HomePage() {
       </section>
 
       {/* INSTAGRAM GRID */}
-      <section className="bg-white py-16">
+      {/* <section className="bg-white py-16">
         <div className="max-w-[1440px] mx-auto px-6">
           <SectionHeader tag="Follow Us" title="@powerny on Instagram" />
           <div className="grid grid-cols-3 md:grid-cols-6 gap-3">
@@ -1229,7 +1244,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   );
 }
