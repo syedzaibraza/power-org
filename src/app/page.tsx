@@ -62,27 +62,27 @@ const heroSlides = [
     cta1Link: "/donate",
     cta2: "Our Programs",
     cta2Link: "/our-work",
-  },
-  {
-    image: IMAGES.hero2,
-    title: "One Mission. Two Continents.",
-    subtitle:
-      "The only Pakistani-American nonprofit in NY operating dual-continent humanitarian programs.",
-    cta1: "Get Involved",
-    cta1Link: "/get-involved",
-    cta2: "Learn More",
-    cta2Link: "/about",
-  },
-  {
-    image: IMAGES.hero3,
-    title: "Every Child Deserves A Future",
-    subtitle:
-      "Providing education, healthcare, and hope to communities in Pakistan and New York.",
-    cta1: "Donate Now",
-    cta1Link: "/donate",
-    cta2: "See Our Impact",
-    cta2Link: "/our-work",
-  },
+  }
+  // ,{
+  //   image: IMAGES.hero2,
+  //   title: "One Mission. Two Continents.",
+  //   subtitle:
+  //     "The only Pakistani-American nonprofit in NY operating dual-continent humanitarian programs.",
+  //   cta1: "Get Involved",
+  //   cta1Link: "/get-involved",
+  //   cta2: "Learn More",
+  //   cta2Link: "/about",
+  // },
+  // {
+  //   image: IMAGES.hero3,
+  //   title: "Every Child Deserves A Future",
+  //   subtitle:
+  //     "Providing education, healthcare, and hope to communities in Pakistan and New York.",
+  //   cta1: "Donate Now",
+  //   cta1Link: "/donate",
+  //   cta2: "See Our Impact",
+  //   cta2Link: "/our-work",
+  // },
 ];
 
 const programs = [
@@ -401,34 +401,38 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-3">
-          {heroSlides.map((_, i) => (
+        {heroSlides.length > 1 && (
+          <>
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 flex gap-3">
+              {heroSlides.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrentSlide(i)}
+                  className={`w-3 h-3 rounded-full transition-all ${i === currentSlide ? "bg-[#D4AF37] w-8" : "bg-white/50"
+                    }`}
+                />
+              ))}
+            </div>
             <button
-              key={i}
-              onClick={() => setCurrentSlide(i)}
-              className={`w-3 h-3 rounded-full transition-all ${i === currentSlide ? "bg-[#D4AF37] w-8" : "bg-white/50"
-                }`}
-            />
-          ))}
-        </div>
-        <button
-          onClick={() =>
-            setCurrentSlide(
-              (s) => (s - 1 + heroSlides.length) % heroSlides.length
-            )
-          }
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
-        >
-          <ChevronLeft size={22} />
-        </button>
-        <button
-          onClick={() =>
-            setCurrentSlide((s) => (s + 1) % heroSlides.length)
-          }
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
-        >
-          <ChevronRight size={22} />
-        </button>
+              onClick={() =>
+                setCurrentSlide(
+                  (s) => (s - 1 + heroSlides.length) % heroSlides.length
+                )
+              }
+              className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+            >
+              <ChevronLeft size={22} />
+            </button>
+            <button
+              onClick={() =>
+                setCurrentSlide((s) => (s + 1) % heroSlides.length)
+              }
+              className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+            >
+              <ChevronRight size={22} />
+            </button>
+          </>
+        )}
       </section>
 
       {/* IMPACT COUNTER */}
