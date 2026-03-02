@@ -10,6 +10,14 @@ import {
   Heart,
 } from "lucide-react";
 
+const socialLinks = [
+  { href: "https://www.facebook.com/tahira.din.5?mibextid=ZbWKwL", Icon: Facebook },
+  { href: "https://x.com/din_tahira", Icon: Twitter },
+  { href: "https://www.instagram.com/tahiragee/", Icon: Instagram },
+  { href: "https://www.youtube.com/@PowerByTahiraDin", Icon: Youtube },
+  { href: "https://www.tiktok.com/@tahiradin580" },
+];
+
 export function Footer() {
   return (
     <footer>
@@ -18,25 +26,11 @@ export function Footer() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center">
-                  <span
-                    style={{ fontSize: "18px", fontWeight: 800, color: "#1B3A6B" }}
-                  >
-                    P
-                  </span>
-                </div>
-                <div>
-                  <div style={{ fontSize: "18px", fontWeight: 700 }}>POWER</div>
-                  <div
-                    style={{
-                      fontSize: "9px",
-                      color: "#D4AF37",
-                      letterSpacing: "1px",
-                    }}
-                  >
-                    ORGANIZATION
-                  </div>
-                </div>
+                <img
+                  src="/power-logo.jpg"
+                  alt="POWER Organization"
+                  className="h-16 w-16 object-contain"
+                />
               </div>
               <p
                 style={{
@@ -49,13 +43,17 @@ export function Footer() {
                 Pain Into Purpose — From New York to Pakistan.
               </p>
               <div className="flex gap-3 mt-5">
-                {[Facebook, Instagram, Youtube, Twitter].map((Icon, i) => (
+                {socialLinks.map(({ href, Icon }, i) => (
                   <a
                     key={i}
-                    href="#"
-                    className="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#D4AF37] transition-colors"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-6 h-6 rounded-full overflow-hidden flex items-center justify-center hover:bg-[#D4AF37] transition-colors bg-white/10 aspect-square shrink-0"
                   >
-                    <Icon size={16} />
+                    {Icon ? <Icon size={18} /> : (
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z" /></svg>
+                    )}
                   </a>
                 ))}
               </div>
@@ -142,7 +140,7 @@ export function Footer() {
                     size={16}
                     className="mt-0.5 shrink-0 text-[#D4AF37]"
                   />{" "}
-                  Centereach, NY 11720, USA
+                  2 Domino Way, Centereach, NY 11720, USA
                 </p>
                 <p
                   className="flex items-center gap-2 text-white/70"
@@ -155,8 +153,7 @@ export function Footer() {
                   className="flex items-center gap-2 text-white/70"
                   style={{ fontSize: "14px" }}
                 >
-                  <Phone size={16} className="shrink-0 text-[#D4AF37]" /> (631)
-                  000-0000
+                  <Phone size={16} className="shrink-0 text-[#D4AF37]" /> +631-615-3001
                 </p>
               </div>
             </div>

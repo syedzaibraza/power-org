@@ -12,7 +12,14 @@ import {
   Instagram,
   Youtube,
   ChevronDown,
+  MapPin,
 } from "lucide-react";
+
+const SOCIAL_LINKS = [
+  { href: "https://www.facebook.com/tahira.din.5?mibextid=ZbWKwL", icon: Facebook },
+  { href: "https://www.instagram.com/tahiragee/", icon: Instagram },
+  { href: "https://www.youtube.com/@PowerByTahiraDin", icon: Youtube },
+];
 
 const navLinks = [
   { label: "Home", path: "/" },
@@ -72,33 +79,29 @@ export function Navigation() {
             className="flex items-center gap-5"
             style={{ fontSize: "13px", color: "#555555" }}
           >
-            <span className="flex items-center gap-1.5">
-              <Phone size={13} /> (631) 000-0000
-            </span>
-            <span className="flex items-center gap-1.5">
+            <Link href="tel:+16316153001" className="flex items-center gap-1.5 cursor-pointer hover:text-[#1B3A6B] transition-colors">
+              <Phone size={13} /> +631-615-3001
+            </Link>
+            <Link href="mailto:info@powerny.org" className="flex items-center gap-1.5 cursor-pointer hover:text-[#1B3A6B] transition-colors">
               <Mail size={13} /> info@powerny.org
-            </span>
-            <span className="hidden md:inline">Centereach, NY 11720</span>
+            </Link>
+
+            <Link href="https://www.google.com/maps/place/2+Domino+Way,+Centereach,+NY+11720,+USA/@40.8657233,-73.0766528" className="flex items-center gap-1.5 cursor-pointer hover:text-[#1B3A6B] transition-colors">
+              <MapPin size={13} />
+              2 Domino Way, Centereach, NY 11720</Link>
           </div>
           <div className="flex items-center gap-3">
-            <a
-              href="#"
-              className="text-[#555555] hover:text-[#1B3A6B] transition-colors"
-            >
-              <Facebook size={15} />
-            </a>
-            <a
-              href="#"
-              className="text-[#555555] hover:text-[#1B3A6B] transition-colors"
-            >
-              <Instagram size={15} />
-            </a>
-            <a
-              href="#"
-              className="text-[#555555] hover:text-[#1B3A6B] transition-colors"
-            >
-              <Youtube size={15} />
-            </a>
+            {SOCIAL_LINKS.map((item, i) => (
+              <a
+                key={i}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#555555] hover:text-[#1B3A6B] transition-colors"
+              >
+                <item.icon size={15} />
+              </a>
+            ))}
             <span
               className="text-[#555555] text-[12px] ml-2 cursor-pointer hover:text-[#1B3A6B]"
             >
@@ -111,39 +114,15 @@ export function Navigation() {
       <nav
         className={`sticky top-0 z-50 bg-[#1B3A6B] transition-shadow duration-300 ${isScrolled ? "shadow-lg" : ""
           }`}
-        style={{ height: "75px" }}
+        style={{ height: "100px" }}
       >
         <div className="max-w-[1440px] mx-auto px-6 h-full flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-10 h-10 rounded-full bg-[#D4AF37] flex items-center justify-center">
-              <span
-                style={{ fontSize: "18px", fontWeight: 800, color: "#1B3A6B" }}
-              >
-                P
-              </span>
-            </div>
-            <div className="hidden sm:block">
-              <div
-                style={{
-                  fontSize: "20px",
-                  fontWeight: 700,
-                  color: "#FFFFFF",
-                  lineHeight: 1.2,
-                }}
-              >
-                POWER
-              </div>
-              <div
-                style={{
-                  fontSize: "10px",
-                  fontWeight: 400,
-                  color: "#D4AF37",
-                  letterSpacing: "1px",
-                }}
-              >
-                ORGANIZATION
-              </div>
-            </div>
+          <Link href="/" className="flex items-center shrink-0 cursor-pointers">
+            <img
+              src="/power-logo.jpg"
+              alt="POWER Organization"
+              className="h-16 w-16 object-contain"
+            />
           </Link>
 
           <div className="hidden lg:flex items-center gap-1">

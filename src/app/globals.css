@@ -13,6 +13,21 @@
   --red: #c0392b;
 }
 
+html {
+  font-size: clamp(16px, 1.2vw + 12px, 22px);
+}
+
 body {
   font-family: var(--font-family);
 }
+
+/* @media (min-width: 1400px) {
+  body {
+    zoom: 1.15;
+  }
+}
+@media (min-width: 1800px) {
+  body {
+    zoom: 1.25;
+  }
+} */

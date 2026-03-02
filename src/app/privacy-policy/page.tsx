@@ -23,7 +23,7 @@ export default function PrivacyPolicyPage() {
             { title: "7. Third-Party Links", content: "Our website may contain links to other sites. We are not responsible for the privacy practices or content of these sites." },
             { title: "8. Children's Privacy", content: "Our website is not intended for children under 13 years of age. We do not knowingly collect personal information from children under 13." },
             { title: "9. Changes to This Policy", content: "We may update this privacy policy from time to time. We will notify you of any changes by posting the new privacy policy on this page and updating the 'Last updated' date." },
-            { title: "10. Contact Us", content: "If you have any questions about this Privacy Policy, please contact us at info@powerny.org or write to us at POWER Organization, Centereach, NY 11720." },
+            { title: "10. Contact Us", content: "If you have any questions about this Privacy Policy, please contact us at info@powerny.org or write to us at POWER Organization, 2 Domino Way, Centereach, NY 11720." },
           ].map((s) => (
             <div key={s.title} className="mb-8">
               <h3 style={{ fontSize: "20px", fontWeight: 600, color: "#1B3A6B", marginBottom: "8px" }}>{s.title}</h3>

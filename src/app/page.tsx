@@ -1205,7 +1205,7 @@ export default function HomePage() {
             ].map((img, i) => (
               <a
                 key={i}
-                href="#"
+                href="https://www.instagram.com/tahiragee/"
                 className="relative group rounded-[8px] overflow-hidden aspect-square"
               >
                 <ImageWithFallback

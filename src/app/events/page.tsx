@@ -62,9 +62,9 @@ export default function EventsPage() {
                       <MapPin size={14} className="text-[#D4AF37]" /> {e.location}
                     </div>
                   </div>
-                  <button className="w-full bg-[#1B3A6B] text-white rounded-[6px] py-2.5 hover:bg-[#0D7377] transition-colors flex items-center justify-center gap-2" style={{ fontSize: "14px", fontWeight: 600 }}>
+                  {/* <button className="w-full bg-[#1B3A6B] text-white rounded-[6px] py-2.5 hover:bg-[#0D7377] transition-colors flex items-center justify-center gap-2" style={{ fontSize: "14px", fontWeight: 600 }}>
                     View Details <ArrowRight size={14} />
-                  </button>
+                  </button> */}
                 </div>
               </div>
             ))}
