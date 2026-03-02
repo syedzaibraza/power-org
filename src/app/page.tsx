@@ -53,6 +53,8 @@ const IMAGES = {
 const heroSlides = [
   {
     image: IMAGES.hero1,
+    videoUrl:
+      "https://www.youtube-nocookie.com/embed/k_uMoEE6EBQ?controls=0&rel=0&playsinline=1&cc_load_policy=0",
     title: "Transforming Pain Into Purpose",
     subtitle:
       "From New York to Pakistan — feeding families, educating children, empowering women.",
@@ -301,7 +303,7 @@ export default function HomePage() {
   useEffect(() => {
     const timer = setInterval(
       () => setCurrentSlide((s) => (s + 1) % heroSlides.length),
-      6000
+      20000
     );
     return () => clearInterval(timer);
   }, []);
@@ -319,11 +321,22 @@ export default function HomePage() {
             className={`absolute inset-0 transition-opacity duration-1000 ${i === currentSlide ? "opacity-100" : "opacity-0"
               }`}
           >
-            <ImageWithFallback
-              src={slide.image}
-              alt={slide.title}
-              className="w-full h-full object-cover"
-            />
+            {"videoUrl" in slide && slide.videoUrl ? (
+              <iframe
+                src={`${slide.videoUrl}&autoplay=1&mute=1&loop=1&playlist=k_uMoEE6EBQ`}
+                title={slide.title}
+                className="absolute inset-0 w-full h-full pointer-events-none"
+                style={{ border: 0 }}
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            ) : (
+              <ImageWithFallback
+                src={slide.image}
+                alt={slide.title}
+                className="w-full h-full object-cover"
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-r from-[#1B3A6B]/85 to-[#1B3A6B]/50" />
           </div>
         ))}

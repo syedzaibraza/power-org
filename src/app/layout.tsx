@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "People Organizing for Welfare, Equality & Reform. Transforming Pain Into Purpose — From New York to Pakistan.",
   icons: {
-    icon: "/power-logo.jpg",
+    icon: "/PowerLogo.png",
   },
 };
 

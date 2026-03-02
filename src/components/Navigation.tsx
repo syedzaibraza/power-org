@@ -107,11 +107,6 @@ export function Navigation() {
                 <item.icon size={15} />
               </a>
             ))}
-            <span
-              className="text-[#555555] text-[12px] ml-2 cursor-pointer hover:text-[#1B3A6B]"
-            >
-              EN | اردو
-            </span>
           </div>
         </div>
       </div>
@@ -124,7 +119,7 @@ export function Navigation() {
         <div className="max-w-[1440px] mx-auto px-6 h-full flex items-center justify-between">
           <Link href="/" className="flex items-center shrink-0 cursor-pointers">
             <img
-              src="/power-logo.jpg"
+              src="/PowerLogo.png"
               alt="POWER Organization"
               className="h-16 w-16 object-contain"
             />
