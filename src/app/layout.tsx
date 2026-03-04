@@ -7,12 +7,29 @@ import { BackToTop } from "@/components/BackToTop";
 import { CookieConsent } from "@/components/CookieConsent";
 import { ScrollToTop } from "@/components/ScrollToTop";
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://powerorg.org";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: "Power - Non Profit Organization",
   description:
     "People Organizing for Welfare, Equality & Reform. Transforming Pain Into Purpose — From New York to Pakistan.",
   icons: {
-    icon: "/Logo-2.png",
+    icon: "/Logo.png",
+  },
+  openGraph: {
+    title: "Power - Non Profit Organization",
+    description:
+      "People Organizing for Welfare, Equality & Reform. Transforming Pain Into Purpose — From New York to Pakistan.",
+    images: ["/FavIcon.jpeg"],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Power - Non Profit Organization",
+    description:
+      "People Organizing for Welfare, Equality & Reform. Transforming Pain Into Purpose — From New York to Pakistan.",
+    images: ["/FavIcon.jpeg"],
   },
 };
 
