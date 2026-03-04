@@ -13,7 +13,7 @@ import {
 const socialLinks = [
   { href: "https://www.facebook.com/tahira.din.5?mibextid=ZbWKwL", Icon: Facebook },
   { href: "https://x.com/din_tahira", Icon: Twitter },
-  { href: "https://www.instagram.com/tahiragee/", Icon: Instagram },
+  { href: "https://www.instagram.com/powerbytahir/", Icon: Instagram },
   { href: "https://www.youtube.com/@PowerByTahiraDin", Icon: Youtube },
   { href: "https://www.tiktok.com/@tahiradin580" },
 ];

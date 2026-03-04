@@ -31,7 +31,7 @@ const TikTokIcon = ({ size = 16 }: { size?: number }) => (
 const SOCIAL_LINKS = [
   { href: "https://www.facebook.com/tahira.din.5?mibextid=ZbWKwL", icon: Facebook },
   { href: "https://x.com/din_tahira", icon: Twitter },
-  { href: "https://www.instagram.com/tahiragee/", icon: Instagram },
+  { href: "https://www.instagram.com/powerbytahir/", icon: Instagram },
   { href: "https://www.youtube.com/@PowerByTahiraDin", icon: Youtube },
   { href: "https://www.tiktok.com/@tahiradin580", icon: TikTokIcon },
 ];
