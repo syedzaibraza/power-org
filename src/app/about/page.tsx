@@ -54,7 +54,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div>
-              <ImageWithFallback src={IMAGES.story} alt="POWER volunteers" className="w-full h-[400px] object-cover rounded-[16px]" style={{ boxShadow: "0 8px 30px rgba(0,0,0,0.12)" }} />
+              <ImageWithFallback src="/Logo.png" alt="POWER volunteers" className="w-full h-[400px] object-contain rounded-[16px]" style={{ boxShadow: "0 8px 30px rgba(0,0,0,0.12)" }} />
             </div>
           </div>
         </div>
@@ -150,7 +150,7 @@ export default function AboutPage() {
           <h2 style={{ fontSize: "32px", fontWeight: 700, color: "#1B3A6B", marginBottom: "16px" }}>Ready to Make a Difference?</h2>
           <p style={{ fontSize: "16px", color: "#555555", marginBottom: "24px" }}>Join us in transforming pain into purpose. Every contribution matters.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/donate" className="bg-[#C0392B] text-white rounded-[6px] hover:bg-[#A93226] transition-all" style={{ padding: "14px 32px", fontSize: "15px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", boxShadow: "0 4px 15px rgba(192,57,43,0.4)" }}>Donate Now</Link>
+            <Link href="https://www.clover.com/pay-widgets/f70920f3-b7cc-44bf-82bb-c7ed3fc2ff22" target="_blank" rel="noopener noreferrer" className="bg-[#C0392B] text-white rounded-[6px] hover:bg-[#A93226] transition-all" style={{ padding: "14px 32px", fontSize: "15px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase", boxShadow: "0 4px 15px rgba(192,57,43,0.4)" }}>Donate Now</Link>
             <Link href="/get-involved" className="border-2 border-[#1B3A6B] text-[#1B3A6B] rounded-[6px] hover:bg-[#1B3A6B] hover:text-white transition-all" style={{ padding: "12px 28px", fontSize: "15px", fontWeight: 700, letterSpacing: "1px", textTransform: "uppercase" }}>Get Involved</Link>
           </div>
         </div>

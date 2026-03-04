@@ -59,7 +59,7 @@ const heroSlides = [
     subtitle:
       "From New York to Pakistan — feeding families, educating children, empowering women.",
     cta1: "Donate Now",
-    cta1Link: "/donate",
+    cta1Link: "https://www.clover.com/pay-widgets/f70920f3-b7cc-44bf-82bb-c7ed3fc2ff22",
     cta2: "Our Programs",
     cta2Link: "/our-work",
   }
@@ -651,7 +651,9 @@ export default function HomePage() {
                   </div>
                   <div className="flex gap-3">
                     <Link
-                      href="/donate"
+                      href="https://www.clover.com/pay-widgets/f70920f3-b7cc-44bf-82bb-c7ed3fc2ff22"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="flex-1 text-center bg-[#C0392B] text-white rounded-[6px] py-2.5 hover:bg-[#A93226] transition-colors"
                       style={{
                         fontSize: "13px",
@@ -992,7 +994,9 @@ export default function HomePage() {
                 title: "Make A Donation",
                 desc: "Every dollar feeds a family, educates a child, or saves a life.",
                 cta: "Donate Now",
-                link: "/donate",
+                link: "https://www.clover.com/pay-widgets/f70920f3-b7cc-44bf-82bb-c7ed3fc2ff22",
+                target: "_blank",
+                rel: "noopener noreferrer",
                 icon: Heart,
               },
               {
@@ -1110,7 +1114,7 @@ export default function HomePage() {
       </section>
 
       {/* RECENT EVENTS */}
-      <section className="bg-white py-20">
+      {/* <section className="bg-white py-20">
         <div className="max-w-[1440px] mx-auto px-6">
           <SectionHeader tag="Upcoming" title="Events & News" />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -1167,7 +1171,7 @@ export default function HomePage() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* NEWSLETTER BAND */}
       <section className="bg-[#D4AF37] py-14">

@@ -34,7 +34,7 @@ export default function DonatePage() {
         breadcrumbs={[{ label: "Home", path: "/" }, { label: "Donate" }]}
       />
 
-      <section className="bg-[#F4F6F9] py-20">
+      {/* <section className="bg-[#F4F6F9] py-20">
         <div className="max-w-[1440px] mx-auto px-6">
           <SectionHeader tag="Your Impact" title="Choose Your Level of Giving" subtitle="See the real-world impact of every dollar you donate." />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -117,7 +117,7 @@ export default function DonatePage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="bg-[#F4F6F9] py-20">
         <div className="max-w-[800px] mx-auto px-6">

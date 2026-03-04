@@ -134,7 +134,7 @@ export function Navigation() {
         <div className="max-w-[1440px] mx-auto px-6 h-full flex items-center justify-between">
           <Link href="/" className="flex items-center shrink-0 cursor-pointers">
             <img
-              src="/PowerLogo.png"
+              src="/Logo.png"
               alt="POWER Organization"
               className="h-16 w-16 object-contain"
             />
@@ -179,7 +179,9 @@ export function Navigation() {
 
           <div className="flex items-center gap-3">
             <Link
-              href="/donate"
+              href="https://www.clover.com/pay-widgets/f70920f3-b7cc-44bf-82bb-c7ed3fc2ff22"
+              target="_blank"
+              rel="noopener noreferrer"
               className="hidden md:block bg-[#C0392B] text-white rounded-[6px] hover:bg-[#A93226] transition-all hover:-translate-y-0.5"
               style={{
                 padding: "10px 24px",
@@ -253,7 +255,9 @@ export function Navigation() {
             ))}
             <div className="mt-6">
               <Link
-                href="/donate"
+                href="https://www.clover.com/pay-widgets/f70920f3-b7cc-44bf-82bb-c7ed3fc2ff22"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block text-center bg-[#C0392B] text-white rounded-[6px] py-4"
                 style={{
                   fontSize: "16px",

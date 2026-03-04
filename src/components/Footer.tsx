@@ -27,7 +27,7 @@ export function Footer() {
             <div className="lg:col-span-1">
               <div className="flex items-center gap-2 mb-4">
                 <img
-                  src="/PowerLogo.png"
+                  src="/Logo.png"
                   alt="POWER Organization"
                   className="h-16 w-16 object-contain"
                 />
